@@ -75,3 +75,20 @@ body {
 .footer__social{
     margin-top: 20px;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 500px) {
+  body {
+    height: auto;
+  }
+
+  .login__actions .button {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .login__link {
+    margin: 0;
+  }
+}
