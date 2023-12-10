@@ -14,6 +14,7 @@
   --btn-link-bg-color: #fff;
   --btn-link-color: #000;
   --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+  --flip-card-bg-color: #3b1e63;
   --divider-bg-color: linear-gradient(
     90deg,
     #5516ba,
@@ -60,6 +61,20 @@ p{
   margin: auto;
   padding: 24px;
   text-align: center;
+}
+
+.button.button-gradient {
+  background: var(--btn-bg-color-gradient);
+  outline: 3px solid transparent;
+  transition: background 1s, outline 1s, transform 1s;
+  background-size: 250%;
+}
+
+.button.button-gradient:hover {
+  background-color: transparent;
+  background-position: 100%;
+  outline: 2px solid var(--secondary-color);
+  transform: scale(1.2);
 }
 
 /* Navbar */
@@ -111,188 +126,9 @@ p{
   transition: background 1s, color 1s;
 }
 
-/* Header */
-.header{
-  position: relative;
-  margin-top: 50px;
-  padding: 100px 0 300px;
-  background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
-  animation: gradient 10s ease infinite alternate;
-}
-
-.header::after{
-  content: "";
-  width: 100%;
-  height: 250px;
-  position: absolute;
-  bottom: 0;
-  background: linear-gradient(0deg, var(--primary-color), transparent);
-}
-
-.header__button {
-  animation: wiggle 2.2s linear infinite;
-}
-
-.header__content{
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  padding: 0 40px;
-}
-
-.header__channels{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-}
-
-.header__channel{
-  object-fit: contain;
-}
-
-.header__title{
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 3rem;
-}
-
-.header__title-light{
-  display: block;
-  font-weight: lighter;
-  font-size: 2rem;
-}
-
-.header .text-small {
-  max-width: 300px;
-  text-align: center;
-}
-
-.divider{
-  width: 70%;
-  max-width: 700px;
-  height: 5px;
-  background: var(--divider-bg-color);
-}
-
-.offer{
-  text-align: center;
-  font-size: 1.25rem;
-}
-
-.offer__price {
-  font-family: "Raleway", sans-serif;
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.offer__price-small {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.button.button-gradient {
-  background: var(--btn-bg-color-gradient);
-  outline: 3px solid transparent;
-  transition: background 1s, outline 1s, transform 1s;
-  background-size: 250%;
-}
-/* Main */
-main{
-  background: url(../images/background-movies-series.png) no-repeat;
-  background-size: cover;
-}
-
-.subscription{
-  background: url(../images/background-movies-series.png) no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.row-cards{
-  display: flex;
-  justify-content: space-around;
-  gap: 80px;
-  margin: 40px 0;
-  perspective: 2000px;
-  perspective-origin: top;
-}
-
-.card{
-  background: var(--card-bg-color);
-  padding: 40px 60px;
-  border-radius: 8px;
-  display: flex;
-  min-height: 600px;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 1s ease-in-out;
-}
-
-.card-header{
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.25rem;
-  margin-bottom: 16px;
-}
-
-.subscription__price{
-  font-size: 2rem;
-  font-family: "Raleway", sans-serif;
-  color: var(--secondary-color);
-  font-weight: 700;
-}
-
-.subscription__price span{
-  color: #fff;
-}
-
-.benefits-description{
-  text-align: left;
-  list-style: none;
-  font-size: 1.25rem;
-  margin-bottom: 14px;
-  padding-left: 14px;
-}
-
-.benefits-description::marker{
-  content: "+";
-  font-size: 2rem;
-  margin: 0 8px 0 0;
-}
-
-.content{
-  margin: 100px auto;
-}
-
-.title{
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-.content__container{
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-.content__card{
-  border-radius: 16px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border: 2px solid transparent;
-  transition: transform .8s, background .8s, border 1s;
-}
-
-.content__img{
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: opacity 2s;
+.menu__item-button:hover{
+  background-color: var(--btn-link-bg-color);
+  color: var(--btn-link-color);
 }
 
 /* Footer */
@@ -306,6 +142,10 @@ main{
   letter-spacing: 2px;
   transition: color 0.5s;
   font-size: 0.875rem;
+}
+
+.footer__link:hover{
+  color: var(--text-color);
 }
 
 .footer_legal{
@@ -337,3 +177,4 @@ main{
   ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
   }
+
