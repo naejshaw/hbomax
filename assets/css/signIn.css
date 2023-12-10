@@ -30,6 +30,7 @@ body {
   flex-direction: column;
   gap: 24px;
   padding: 40px;
+  animation: abrir 1.25s ease-in;
 }
 
 .login__title {
@@ -90,5 +91,16 @@ body {
 
   .login__link {
     margin: 0;
+  }
+}
+
+
+/* Animation */
+@keyframes abrir{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
   }
 }
