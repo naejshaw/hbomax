@@ -200,6 +200,100 @@ p{
   background-size: 250%;
 }
 /* Main */
+main{
+  background: url(../images/background-movies-series.png) no-repeat;
+  background-size: cover;
+}
+
+.subscription{
+  background: url(../images/background-movies-series.png) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.row-cards{
+  display: flex;
+  justify-content: space-around;
+  gap: 80px;
+  margin: 40px 0;
+  perspective: 2000px;
+  perspective-origin: top;
+}
+
+.card{
+  background: var(--card-bg-color);
+  padding: 40px 60px;
+  border-radius: 8px;
+  display: flex;
+  min-height: 600px;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 1s ease-in-out;
+}
+
+.card-header{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.subscription__price{
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.subscription__price span{
+  color: #fff;
+}
+
+.benefits-description{
+  text-align: left;
+  list-style: none;
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+  padding-left: 14px;
+}
+
+.benefits-description::marker{
+  content: "+";
+  font-size: 2rem;
+  margin: 0 8px 0 0;
+}
+
+.content{
+  margin: 100px auto;
+}
+
+.title{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.content__container{
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.content__card{
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid transparent;
+  transition: transform .8s, background .8s, border 1s;
+}
+
+.content__img{
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 2s;
+}
 
 /* Footer */
 .footer__link{
